@@ -30,13 +30,13 @@ let returnData = [
 // obnizの設定
 const Obniz = require("obniz");
 // センサー　
-const obniz1 = new Obniz("0667-4000");
+const obniz1 = new Obniz("");
 /*
 obniz1を接続後、obniz2の接続
 */
 obniz1.onconnect = async function() {
   // パトランプ
-  const obniz2 = new Obniz("3849-2551");
+  const obniz2 = new Obniz("");
   obniz2.onconnect = async function() {
     const humanDetector = obniz1.wired("HC-SR505", { vcc: 2, gnd: 0, signal: 1 });
 
